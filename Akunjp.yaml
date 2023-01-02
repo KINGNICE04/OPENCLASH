@@ -1,0 +1,49 @@
+proxies:
+  - name: GFN-JP
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: e473359f-96e0-4f0d-9d21-8ca5c0267e30
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: jp.vmess2.xservs.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: jp.vmess2.xservs.xyz
+    udp: true
+  - name: GFN-JP 2
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: e473359f-96e0-4f0d-9d21-8ca5c0267e30
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: jp.vmess2.xservs.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: jp.vmess2.xservs.xyz
+    udp: true
+  - name: GFN-JP 3
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: e473359f-96e0-4f0d-9d21-8ca5c0267e30
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: jp.vmess2.xservs.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: jp.vmess2.xservs.xyz
+    udp: true
