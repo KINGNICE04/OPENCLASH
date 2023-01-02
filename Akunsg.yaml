@@ -1,6 +1,6 @@
 proxies:
   - name: SG-GFN
-    server: 104.17.3.81
+    server: 104.17.72.206
     port: 80
     type: vmess
     uuid: f051faf0-c0fe-4d59-ab89-9a364f1cb737
@@ -32,7 +32,7 @@ proxies:
         Host: teams.microsoft.com
     udp: true
   - name: SG-GFN 2
-    server: 104.17.3.81
+    server: 104.17.72.206
     port: 80
     type: vmess
     uuid: f051faf0-c0fe-4d59-ab89-9a364f1cb737
