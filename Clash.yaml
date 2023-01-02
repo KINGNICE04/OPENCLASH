@@ -52,20 +52,26 @@ proxy-groups:
       - Akunjp
 proxy-providers
   Akunsg:
-    type: file
-    path: "./Akunsg.yaml"
-    url:
+    type: http
+    behavior: classical
+    path: ./Akunsg.yaml
+    url: https://raw.githubusercontent.com/NICE28004/akun_clash04/main/T3.yaml
+    interval: 3600
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 180
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
   Akunjp:
-    type: file
-    path: "./Akunjp.yaml"
-    url:
+    type: http
+    behavior: classical
+    path: ./Akunjp.yaml
+    url: https://raw.githubusercontent.com/NICE28004/akun_clash04/main/T3.yaml
+    interval: 3600
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 180
+      lazy: true
+      url: 'http://www.gstatic.com/generate_204'
 rules
   - MATCH,CLASH
