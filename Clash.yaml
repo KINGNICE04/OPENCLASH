@@ -54,8 +54,8 @@ proxy-providers:
   Akunsg:
     type: http
     behavior: classical
-    path: ./Akunsg.yaml
-    url: https://raw.githubusercontent.com/NICE28004/akun_clash04/main/T3.yaml
+    path: ./proxy-providers/Akunsg.yaml
+    url: https://raw.githubusercontent.com/KINGNICE04/OPENCLASH/main/Akunsg.yaml
     interval: 3600
     health-check:
       enable: true
@@ -65,8 +65,8 @@ proxy-providers:
   Akunjp:
     type: http
     behavior: classical
-    path: ./Akunjp.yaml
-    url: https://raw.githubusercontent.com/NICE28004/akun_clash04/main/T3.yaml
+    path: ./proxy-providers/Akunjp.yaml
+    url: https://raw.githubusercontent.com/KINGNICE04/OPENCLASH/main/Akunjp.yaml
     interval: 3600
     health-check:
       enable: true
