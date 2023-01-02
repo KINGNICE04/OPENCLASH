@@ -50,7 +50,7 @@ proxy-groups:
     interval: 300
     use:
       - Akunjp
-proxy-providers
+proxy-providers:
   Akunsg:
     type: http
     behavior: classical
