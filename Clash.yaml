@@ -1,1 +1,71 @@
-Hd
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxy-groups:
+  - name: CLASH
+    type: select
+    proxies:
+      - GFN-SG
+      - GFN-JP
+      - DIRECT
+  - name: GFN-SG
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    use:
+      - Akunsg
+  - name: GFN-JP
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    use:
+      - Akunjp
+proxy-providers
+  Akunsg:
+    type: file
+    path: "./Akunsg.yaml"
+    url:
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Akunjp:
+    type: file
+    path: "./Akunjp.yaml"
+    url:
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+rules
+  - MATCH,CLASH
