@@ -37,7 +37,6 @@ proxy-groups:
     proxies:
       - GFN-SG
       - GFN-JP
-      - DIRECT
   - name: GFN-SG
     type: fallback
     url: http://hi.bonds.id/ping
