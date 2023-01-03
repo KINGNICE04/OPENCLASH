@@ -107,7 +107,7 @@ proxy-providers:
       interval: 180
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
-   Akunid:
+  Akunid:
     type: http
     behavior: classical
     path: ./proxy-providers/Akunid.yaml
