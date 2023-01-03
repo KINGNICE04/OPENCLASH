@@ -66,6 +66,7 @@ proxy-groups:
       - GFN-SG
       - GFN-ID
       - GFN-JP
+      - Direct
   - name: GFN-SG
     type: fallback
     url: http://hi.bonds.id/ping
@@ -118,7 +119,14 @@ proxy-providers:
       interval: 180
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
+rule-providers:
+  rule_Direct:
+    type: file
+    behavior: classical
+    path: "./rule_provider/rule_direct.yaml"
 rules:
+  - RULE-SET,rule_Direct,Direct
+  - DST-PORT,22,Direct
   - MATCH,CLASH
 tun:
   enable: true
