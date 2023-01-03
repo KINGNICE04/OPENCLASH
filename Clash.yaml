@@ -82,11 +82,11 @@ proxy-providers:
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
 rule-providers:
-  rule_portgames:
+rule_portgames:
     type: http
     behavior: classical
     path: "./rule_provider/rule_portgames.yaml"
-    url: https://raw.githubusercontent.com/KINGNICE04/Rule_OPENCLASH/main/rule_portgames.yaml
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
     interval: 86400
 rules:
   - RULE-SET,rule_portgames,GFN-SG
