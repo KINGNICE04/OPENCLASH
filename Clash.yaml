@@ -81,13 +81,13 @@ proxy-providers:
       interval: 180
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
-rule-providers:
-rule_portgames:
-    type: http
-    behavior: classical
-    path: "./rule_provider/rule_portgames.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
-    interval: 86400
 rules:
-  - RULE-SET,rule_portgames,GFN-SG
   - MATCH,CLASH
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+tproxy-port: 7895
