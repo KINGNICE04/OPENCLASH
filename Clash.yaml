@@ -66,7 +66,7 @@ proxy-groups:
       - GFN-SG
       - GFN-ID
       - GFN-JP
-      - Direct
+      - DIRECT
   - name: GFN-SG
     type: fallback
     url: http://hi.bonds.id/ping
@@ -125,8 +125,8 @@ rule-providers:
     behavior: classical
     path: "./rule_provider/rule_direct.yaml"
 rules:
-  - RULE-SET,rule_Direct,Direct
-  - DST-PORT,22,Direct
+  - RULE-SET,rule_Direct,DIRECT
+  - DST-PORT,22,DIRECT
   - MATCH,CLASH
 tun:
   enable: true
