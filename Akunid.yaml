@@ -1,0 +1,65 @@
+proxies:
+  - name: GFN-ID
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: 3e25d3a0-8b2d-11ed-b433-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id-ikd.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: id-ikd.vmess.sbs
+    udp: true
+  - name: GFN-ID 2
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: 3e25d3a0-8b2d-11ed-b433-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id-ikd.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: id-ikd.vmess.sbs
+    udp: true
+  - name: GFN-ID 3
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: 3e25d3a0-8b2d-11ed-b433-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id-ikd.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: id-ikd.vmess.sbs
+    udp: true
+  - name: GFN-ID 4
+    server: 104.17.3.81
+    port: 80
+    type: vmess
+    uuid: 3e25d3a0-8b2d-11ed-b433-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id-ikd.vmess.sbs
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: id-ikd.vmess.sbs
+    udp: true
