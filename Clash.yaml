@@ -82,6 +82,5 @@ proxy-providers:
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
 rules:
-  - DST-PORT,80,GFN-SG
-  - DST-PORT,2083,GFN-SG
+  - DST-PORT,20001,1900,10001,7008,10000-10009,17000,8008,7008,GFN-SG
   - MATCH,CLASH
