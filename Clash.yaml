@@ -123,7 +123,7 @@ rule-providers:
   rule_Direct:
     type: file
     behavior: classical
-    path: "./rule_provider/rule_direct.yaml"
+    path: "./rule_direct.yaml"
 rules:
   - RULE-SET,rule_Direct,DIRECT
   - DST-PORT,22,DIRECT
