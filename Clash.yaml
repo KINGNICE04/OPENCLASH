@@ -73,7 +73,7 @@ proxy-groups:
     use:
       - Akunsg
   - name: GFN-ID
-    type:fallback
+    type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     use:
