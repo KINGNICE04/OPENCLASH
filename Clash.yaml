@@ -119,6 +119,10 @@ rule-providers:
     path: "./rule_provider/rule_hijacking.yaml"
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hijacking.yaml
     interval: 86400
+  rule_Ads:
+    type: file
+    behavior: classical
+    path: "./rule_provider/rule_Ads.yaml"
   rule_basicads:
     type: http
     behavior: domain
@@ -136,6 +140,7 @@ rules:
   - RULE-SET,rule_hijacking,ADS
   - RULE-SET,rule_basicads,ADS
   - RULE-SET,rule_personalads,ADS
+  - RULE-SET,rule_Ads,ADS
   - DST-PORT,22,DIRECT
   - MATCH,CLASH
 tun:
