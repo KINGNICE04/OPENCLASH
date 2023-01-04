@@ -1,5 +1,53 @@
 proxies:
   - name: SG-GFN
+    server: 139.99.102.115
+    port: 8880
+    type: vmess
+    uuid: 6853fb66-4185-4bc0-bbc0-e13ee40cc5af
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: teams.microsoft.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws/Freeovh-globalssh
+      headers:
+        Host: teams.microsoft.com
+    udp: true
+  - name: SG-GFN 2
+    server: 139.99.102.115
+    port: 8880
+    type: vmess
+    uuid: 6853fb66-4185-4bc0-bbc0-e13ee40cc5af
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: teams.microsoft.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws/Freeovh-globalssh
+      headers:
+        Host: teams.microsoft.com
+    udp: true
+  - name: SG-GFN 3
+    server: 139.99.102.115
+    port: 8880
+    type: vmess
+    uuid: 6853fb66-4185-4bc0-bbc0-e13ee40cc5af
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: teams.microsoft.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws/Freeovh-globalssh
+      headers:
+        Host: teams.microsoft.com
+    udp: true
+  - name: SG-GFN 4
     server: 104.17.72.206
     port: 80
     type: vmess
@@ -31,7 +79,7 @@ proxies:
       headers:
         Host: teams.microsoft.com
     udp: true
-  - name: SG-GFN 2
+  - name: SG-GFN 5
     server: 104.17.72.206
     port: 80
     type: vmess
@@ -63,7 +111,7 @@ proxies:
       headers:
         Host: teams.microsoft.com
     udp: true
-  - name: SG-GFN 3
+  - name: SG-GFN 6
     server: 104.17.3.81
     port: 80
     type: vmess
