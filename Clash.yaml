@@ -64,7 +64,6 @@ proxy-groups:
     type: select
     proxies:
       - GFN-SG
-      - GFN-ID
       - GFN-JP
       - DIRECT
   - name: GFN-SG
@@ -73,12 +72,6 @@ proxy-groups:
     interval: 300
     use:
       - Akunsg
-  - name: GFN-ID
-    type: fallback
-    url: http://hi.bonds.id/ping
-    interval: 300
-    use:
-      - Akunid
   - name: GFN-JP
     type: fallback
     url: http://hi.bonds.id/ping
@@ -102,17 +95,6 @@ proxy-providers:
     behavior: classical
     path: ./proxy-providers/Akunjp.yaml
     url: https://raw.githubusercontent.com/KINGNICE04/OPENCLASH/main/Akunjp.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      interval: 180
-      lazy: true
-      url: 'http://www.gestatic.com/generate_204'
-  Akunid:
-    type: http
-    behavior: classical
-    path: ./proxy-providers/Akunid.yaml
-    url: https://raw.githubusercontent.com/KINGNICE04/OPENCLASH/main/Akunid.yaml
     interval: 3600
     health-check:
       enable: true
