@@ -120,9 +120,23 @@ rule-providers:
     path: "./rule_provider/rule_hijacking.yaml"
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hijacking.yaml
     interval: 86400
+  rule_basicads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: "./rule_provider/rule_basicads.yaml"
+    interval: 43200
+  rule_personalads:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./rule_provider/rule_personalads.yaml"
+    interval: 86400
 rules:
   - RULE-SET,rule_Direct,DIRECT
   - RULE-SET,rule_hijacking,ADS
+  - RULE-SET,rule_basicads,ADS
+  - RULE-SET,rule_personalads,ADS
   - DST-PORT,22,DIRECT
   - MATCH,CLASH
 tun:
