@@ -64,27 +64,28 @@ proxy-groups:
     type: select
     proxies:
       - GFN-SG
-      - GFN-ID
       - GFN-JP
-      - DIRECT
+      - ADS
   - name: GFN-SG
     type: fallback
+    disable-udp: false
     url: http://hi.bonds.id/ping
     interval: 300
     use:
       - Akunsg
-  - name: GFN-ID
-    type: fallback
-    url: http://hi.bonds.id/ping
-    interval: 300
-    use:
-      - Akunid
   - name: GFN-JP
     type: fallback
+    disable-udp: false
     url: http://hi.bonds.id/ping
     interval: 300
     use:
       - Akunjp
+  - name: ADS
+    type: select
+    disable-udp: false
+    proxies:
+      - REJECT
+      - DIRECT
 proxy-providers:
   Akunsg:
     type: http
@@ -108,24 +109,20 @@ proxy-providers:
       interval: 180
       lazy: true
       url: 'http://www.gestatic.com/generate_204'
-  Akunid:
-    type: http
-    behavior: classical
-    path: ./proxy-providers/Akunid.yaml
-    url: https://raw.githubusercontent.com/KINGNICE04/OPENCLASH/main/Akunid.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      interval: 180
-      lazy: true
-      url: 'http://www.gestatic.com/generate_204'
 rule-providers:
   rule_Direct:
     type: file
     behavior: classical
     path: "./rule_direct.yaml"
+  rule_hijacking:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_hijacking.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hijacking.yaml
+    interval: 86400
 rules:
   - RULE-SET,rule_Direct,DIRECT
+  - RULE-SET,rule_hijacking,ADS
   - DST-PORT,22,DIRECT
   - MATCH,CLASH
 tun:
